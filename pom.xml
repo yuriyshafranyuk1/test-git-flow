@@ -97,6 +97,7 @@
 					<enableSshAgent>true</enableSshAgent>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<allowUntracked>true</allowUntracked>
+					<squash>true</squash>
 
 					<flowInitContext>
 						<developBranchName>frank</developBranchName>
