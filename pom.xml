@@ -98,6 +98,7 @@
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<allowUntracked>true</allowUntracked>
 					<squash>true</squash>
+					<noDeploy>true</noDeploy>
 
 					<flowInitContext>
 						<developBranchName>frank</developBranchName>
