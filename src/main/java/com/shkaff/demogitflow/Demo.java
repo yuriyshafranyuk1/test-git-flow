@@ -10,4 +10,6 @@ public class Demo {
   private String name;
   
   private String id;
+  
+  private int version;
 }
