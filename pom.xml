@@ -5,7 +5,10 @@
 	<groupId>com.shkaff</groupId>
 	<artifactId>demo-git-flow</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<module>submodule-test</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>demo-git-flow</name>
 	<description>Demo project for Spring Boot</description>
@@ -96,7 +99,6 @@
 					<enableSshAgent>true</enableSshAgent>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<allowUntracked>true</allowUntracked>
-					<squash>true</squash>
 					<noDeploy>true</noDeploy>
 
 					<flowInitContext>
