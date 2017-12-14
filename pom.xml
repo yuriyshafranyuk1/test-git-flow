@@ -126,8 +126,8 @@
 					</gitFlowConfig>
 
 					<commitMessages>
-						<releaseStartMessage>update versions  f${project.version}or release</releaseStartMessage>
-						<releaseFinishMessage>update for next development version ${project.version}</releaseFinishMessage>
+						<releaseStartMessage>update versions @{version} for release</releaseStartMessage>
+						<releaseFinishMessage>update for next development version @{version}</releaseFinishMessage>
 					</commitMessages>
 				</configuration>
 			</plugin>
