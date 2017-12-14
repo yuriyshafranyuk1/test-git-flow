@@ -91,21 +91,44 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>external.atlassian.jgitflow</groupId>
-				<artifactId>jgitflow-maven-plugin</artifactId>
-				<version>1.0-m5.1</version>
-				<configuration>
-					<enableSshAgent>true</enableSshAgent>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<allowUntracked>true</allowUntracked>
-					<noDeploy>true</noDeploy>
+			<!--<plugin>-->
+				<!--<groupId>external.atlassian.jgitflow</groupId>-->
+				<!--<artifactId>jgitflow-maven-plugin</artifactId>-->
+				<!--<version>1.0-m5.1</version>-->
+				<!--<configuration>-->
+					<!--<enableSshAgent>true</enableSshAgent>-->
+					<!--<autoVersionSubmodules>true</autoVersionSubmodules>-->
+					<!--<allowUntracked>true</allowUntracked>-->
+					<!--<noDeploy>true</noDeploy>-->
 
-					<flowInitContext>
-						<developBranchName>frank</developBranchName>
-						<versionTagPrefix />
+					<!--<flowInitContext>-->
+						<!--<developBranchName>frank</developBranchName>-->
+						<!--<versionTagPrefix />-->
+						<!--<releaseBranchPrefix>release-</releaseBranchPrefix>-->
+					<!--</flowInitContext>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<plugin>
+				<groupId>com.amashchenko.maven.plugin</groupId>
+				<artifactId>gitflow-maven-plugin</artifactId>
+				<version>1.8.0</version>
+				<configuration>
+					<verbose>true</verbose>
+					<versionDigitToIncrement>2</versionDigitToIncrement>
+					<releaseRebase>true</releaseRebase>
+					<pushRemote>false</pushRemote>
+					<skipTestProject>true</skipTestProject>
+					<gitFlowConfig>
+						<productionBranch>frank</productionBranch>
+						<developmentBranch>frank</developmentBranch>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
-					</flowInitContext>
+						<versionTagPrefix></versionTagPrefix>
+					</gitFlowConfig>
+
+					<commitMessages>
+						<releaseStartMessage>update versions  f${project.version}or release</releaseStartMessage>
+						<releaseFinishMessage>update for next development version ${project.version}</releaseFinishMessage>
+					</commitMessages>
 				</configuration>
 			</plugin>
 		</plugins>
